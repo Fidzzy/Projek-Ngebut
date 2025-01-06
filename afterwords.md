@@ -3,6 +3,11 @@ Jadii..
 Itulah tadi semua ucapan buatmu
 Gimana menurutmu hehe :V (*serius nanya, plis jawab)
 Soalnya sampe sekarang ini codingan terpanjang yang pernah kubuat (700++ baris cuyyy) makanya aku minta pendapatmu
+Yang ini pun akhirnya bisa aku uploadnya jadi link jdi bisa diakses kapan aja
+Yang file taun kemarin juga aku baru upload kemarin ato tadi pagi gitu
+Upload ke github ini, tempat para programmer ngupload" projeknya, kek abangmu lah
+Tapi keknya dlm waktu dekat ini mau kuubah visibilitasnya jadi private masi mikir2 sih
+Kalo pengen liat kau berapa banyak file + berapa baris buat ini cek aj link ini https://github.com/Fidzzy/Projek-Ngebut
 Awalnya aku kan mau buat ini dari awal liburan, tapi itulah..
 Tetap dikeroyok tugas pang mana aku mageran lagi ngerjainnya T_T, ditambah diajak jalan aja aku (biarpun kadang aku jalan sendiri sih)
 Jadinya baru tanggal 3 itu kubuat ini wkwkwkwk ngebut kali 3 hari
