@@ -2,7 +2,7 @@ Halo haloo...
 Jadii..
 Itulah tadi semua ucapan buatmu
 Gimana menurutmu hehe :V (*serius nanya)
-Soalnya sampe sekarang ini codingan terpanjang yang pernah kubuat (770 baris cuyyy) makanya aku minta pendapatmu
+Soalnya sampe sekarang ini codingan terpanjang yang pernah kubuat (700++ baris cuyyy) makanya aku minta pendapatmu
 Awalnya aku kan mau buat ini dari awal liburan, tapi itulah..
 Tetap dikeroyok tugas pang mana aku mageran lagi ngerjainnya T_T, ditambah diajak jalan aja aku (biarpun kadang aku jalan sendiri sih)
 Jadinya baru tanggal 3 itu kubuat ini wkwkwkwk ngebut kali 3 hari
@@ -20,9 +20,6 @@ Tumben kau tak respon vt seharian, biasanya minimal senggol doang buat nyalain s
 Apa kau lagi sakit?
 Gimana mk semester 2 ini? Apa apa aja?
 Jangan segan" nanya samaku klo mau nnya kau hehe, jujur aja dri dulu seruan baso samamu
-Dh lama ga caturan, kapan lagi kita main?
-Tau kau habis ditolak ukm catur aku semalam :( padahal pengen aku kapan" latih tanding sm anak STAN 
-Ukm bridge yang nerimaku, tpi gapapalah bisa aku main kartu remi sepuasnya di kampus
 Mungkin itu ajalah dariku, jika berkenan jawab pertanyaanku itu di wa hehe :v
 Sekali lagi Selamat Ulang Tahun Muti!! Senang mengenalmu
 
