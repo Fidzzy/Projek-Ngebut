@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>Kartu Ucapan n Kenangan</title>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<style>
+		* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		}	
+
+		.wp {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		}
+
+		.ctr {
+		height: 400px;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: start;
+		}
+
+		.kartus {
+		width: 80px;
+		border-radius: .75rem;
+		background-size: cover;
+		cursor: pointer;
+		overflow: hidden;
+		border-radius: 2rem;
+		margin: 0 10px;
+		display: flex;
+		align-items: flex-end;
+		transition: .6s cubic-bezier(.20, -0.03, 0, .99);
+		box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+		}
+
+		.kartus > .kolom {
+		color: white;
+		display: flex;
+		flex-wrap: nowrap;
+		}
+
+		.kartus > .kolom > .ikon {
+		background: #223;
+		color: white;
+		border-radius: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 15px;
+		}
+
+		.kartus > .kolom > .desk {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		overflow: hidden;
+		height: 80px;
+		width: 520px;
+		opacity: 0;
+		transform: translateY(30px);
+		transition-delay: .3s;
+		transition: all .3s ease;
+		}
+
+		.desk p {
+		color: #b0b0ba;
+		padding-top: 15px;
+		}
+
+		.desk h4 {
+		text-transform: uppercase;
+		}
+
+		input {
+		display: none;
+		}
+
+		input:checked + label {
+		width: 600px;
+		}
+
+		input:checked + label .desk {
+		opacity: 1 !important;
+		transform: translateY(0) !important;
+		}
+
+		.kartus[for="c1"] {
+		background-image: url('https://images2.imgbox.com/72/a7/TmYhwdgX_o.jpg');
+		}
+
+		.kartus[for="c2"] {
+		background-image: url('https://images2.imgbox.com/de/7e/4yP0DRkP_o.jpg');
+		}
+
+		.kartus[for="c3"] {
+		background-image: url('https://images2.imgbox.com/d3/e9/exTBCcXA_o.jpg');
+		}
+
+		.kartus[for="c4"] {
+		background-image: url('https://images2.imgbox.com/30/48/ZWio65U9_o.jpg');
+		}
+
+		.kartus[for="c5"] {
+		background-image: url('https://images2.imgbox.com/f2/2c/bMdqopca_o.jpg');
+		}
+
+		.kartus[for="c6"] {
+		background-image: url('https://images2.imgbox.com/bb/15/pfGsFdYx_o.jpg');
+		}
+
+		.kartus[for="c7"] {
+		background-image: url('https://images2.imgbox.com/ac/dd/NS9Q27jl_o.jpg');
+		}
+
+		.kartus[for="c8"] {
+		background-image: url('https://images2.imgbox.com/cb/40/3UvpMkad_o.jpg');
+		}
+
+		.kartus[for="c9"] {
+		background-image: url('https://images2.imgbox.com/66/ea/r7Sr0J1r_o.jpg');
+		}
+
+		.kartus[for="c10"] {
+		background-image: url('https://images2.imgbox.com/d8/ba/BM0PUAK2_o.jpg');
+		}
+
+		@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+		@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+		::selection {
+			background: transparent;
+		}
+
+		h4 {
+			font-size: 26px;
+			line-height: 1px;
+			font-family: 'Amatic SC', cursive !important;
+		}
+
+		.warna1{
+			color: #1BBC98;
+			padding-bottom: 15px;
+		}
+
+		.warna2{
+			color: #C03928;
+			padding-bottom: 10px;
+			padding-top: 10px; 
+		}
+
+		.kartu {
+			color: #013243;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 300px;
+			height: 400px;
+			background: #e0e1dc;
+			transform-style: preserve-3d;
+			transform: translate(-50%, -50%) perspective(2000px);
+			box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
+			transition: 1s; 
+		}
+
+		.kartu:hover{
+			transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
+			box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+		}
+
+		.kartu:before {
+			content: '';
+			position: absolute;
+			top: -5px;
+			left: 0;
+			width: 100%;
+			height: 5px;
+			background: #BAC18A;
+			transform-origin: bottom;
+			transform: skewX(-45deg);
+		}
+
+		.kartu:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -5px;
+			width: 5px;
+			height: 100%;
+			background: #92A92C;
+			transform-origin: left;
+			transform: skewY(-45deg);
+		}
+
+		.kartu .kotakgambar {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			transform-origin: left;
+			transition: .7s;
+		}
+
+		.kartu .bark {
+			position: absolute;
+			background: #e0e1dc;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: .7s;
+		}
+
+		.kartu .kotakgambar img {
+			min-width: 250px;
+			max-height: 400px;
+		}
+
+		.kartu:hover .kotakgambar {
+			transform: rotateY(-135deg);
+		}
+
+		.kartu:hover .bark {
+			opacity: 1;
+			transition: .6s;
+			box-shadow: 300px 200px 100px rgba('0, 0, 0, .4') inset;
+		}
+
+		.kartu .detail {
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-sizing: border-box;
+			padding: 0 0 0 10px;
+			z-index: -1;
+			margin-top: 70px;
+		}
+
+		.kartu .detail h4 {
+			text-align: center;
+		}
+
+		.kananan {
+			text-align: right;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+			background: hsla(46, 100%, 81%, 0.877)
+
+		}
+
+		.container {
+			display: flex;
+			height: 260vh;
+			flex-direction: column;
+		}
+
+		.bagian1, .bagian2 {
+			flex: 1;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.opsi {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 3px;
+			padding-bottom: 100px;
+			flex-direction: row;
+
+		}
+
+		.kembali, .afterwords {
+			margin-top: 50px; /* Jarak antara video dan tombol */
+			text-align: center; /* Mengatur teks tombol agar berada di tengah */
+			border-radius: 3px;
+			padding: 5px 20px;
+		}
+
+    	.kembali a, .afterwords a {
+    		color: #ffffff; /* Warna teks tombol */
+			text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+			padding: 10px 20px; /* Menambahkan padding pada tombol */
+			background-color: #ffe600; /* Warna latar belakang tombol */
+			border-radius: 5px; /* Membuat sudut tombol melengkung */
+		}
+
+    	.kembali a:hover, .afterwords a:hover {
+      		background-color: #ffab23e1; /* Mengubah warna latar belakang saat hover */
+    	}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="kartu">
+			<div class="kotakgambar">
+				<div class="bark"></div>
+					<img src="https://image.ibb.co/fYzTrb/lastofus.jpg">
+				</div>
+				<div class="detail">
+					<h4 class="warna1">HAPPY BIRTHDAY</h4>
+					<h4 class="warna2">MUTIARA ELISYA </h4>
+					<p>Habede yang ke 19 yoo, ga nyangka taun depan dh 20 kau pang</p>
+					<p>Moga umurnya makin berkah aamiin</p>
+					<p>Tetap jadi Muti yang baikkk</p>
+					<p>Semoga kuliahnya lancar, 3.5 tahun IPK 4.00 + Sukses kedepannya dunia akhirat</p>
+					<p>Makasih krna dah mau dengan senang hati respon semua cerita n keluh kesah ku selama ini wkwk, ga tau ntah ngerasa terganggu kau :)</p>
+					<p>Mungkin itu dulu, di file afterwords nti kusambung. Tengok bawah yy, ada bbrapa mungkin fotomu yg agak" wkwkwk</p>
+					<p class="kananan">Hafidz</p>
+			</div>
+		</div>
+		<div class="bagian2">
+			<div class="wp">
+				<div class="ctr">
+					<input type="radio" name="slide" id="c1" checked>
+					<label for="c1" class="kartus">
+						<div class="kolom">
+							<div class="icon">1</div>
+							<div class="desk">
+								<h4>Mading Pertama Aquattor</h4>
+								<p>10 September 2021</p>
+							</div>
+						</div>
+					</label>
+					<input type="radio" name="slide" id="c2" checked>
+					<label for="c2" class="kartus">
+						<div class="kolom">
+							<div class="icon">2</div>
+							<div class="desk">
+								<h4>3 Besar Ni Bos</h4>
+								<p>17 Desember 2021</p>
+							</div>
+						</div>
+					</label>
+					<input type="radio" name="slide" id="c3" checked>
+					<label for="c3" class="kartus">
+						<div class="kolom">
+							<div class="icon">3</div>
+							<div class="desk">
+								<h4>Bukber Rusha 2023</h4>
+								<p>14 April 2023</p>
+							</div>
+						</div>
+					</label>
+					<input type="radio" name="slide" id="c4" checked>
+					<label for="c4" class="kartus">
+						<div class="kolom">
+							<div class="icon">4</div>
+							<div class="desk">
+								<h4>Sableng</h4>
+								<p>13 Desember 2023</p>
+							</div>
+						</div>
+					</label>
+					<input type="radio" name="slide" id="c5" checked>
+					<label for="c5" class="kartus">
+						<div class="kolom">
+							<div class="icon">5</div>
+							<div class="desk">
+								<h4>Pecicilan</h4>
+								<p>Unknown Date</p>
+							</div>
+						</div>
+					</label>
+					<input type="radio" name="slide" id="c6" checked>
+					<label for="c6" class="kartus">
+						<div class="kolom">
+							<div class="icon">6</div>
+							<div class="desk">
+								<h4>Best Supporter setelah Ortuku</h4>
+								<p>19 Mei 2024</p>
+							</div>
+						</div>
+					</label>
+					<input type="radio" name="slide" id="c7" checked>
+					<label for="c7" class="kartus">
+						<div class="kolom">
+							<div class="icon">7</div>
+							<div class="desk">
+								<h4>Warna Merah, Warna Cintaa</h4>
+								<p>27 Maret 2024</p>
+							</div>
+						</div>
+					</label>
+					<input type="radio" name="slide" id="c8" checked>
+					<label for="c8" class="kartus">
+						<div class="kolom">
+							<div class="icon">8</div>
+							<div class="desk">
+								<h4>Perpisahan Rusha</h4>
+								<p>Unknown Date</p>
+							</div>
+						</div>
+					</label>
+					<input type="radio" name="slide" id="c9" checked>
+					<label for="c9" class="kartus">
+						<div class="kolom">
+							<div class="icon">9</div>
+							<div class="desk">
+								<h4>Bocil esempeh</h4>
+								<p>Unknown Date</p>
+							</div>
+						</div>
+					</label>
+					<input type="radio" name="slide" id="c10" checked>
+					<label for="c10" class="kartus">
+						<div class="kolom">
+							<div class="icon">10</div>
+							<div class="desk">
+								<h4>2 Tuyul Dibelakangmu</h4>
+								<p>Unknown Date</p>
+							</div>
+						</div>
+					</label>
+				</div>	
+			</div>
+		</div>
+		<div class="opsi">
+			<div class="kembali">
+			  <a href="hal2.html">Balik Ntar</a>
+			</div>
+			<div class="afterwords">
+				<a href="afterwords.md">Akhir Kata</a>
+			  </div>
+		</div>
+		<audio id="background-audio" autoplay loop>
+			<source src="lagubcg2.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<script>
+		 const audioElement = document.getElementById('background-audio');
+		 audioElement.volume = 1.0; // Mengatur volume (0.0 hingga 1.0)
+	</script>
+</body>
+</html>

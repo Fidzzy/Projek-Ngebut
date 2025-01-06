@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kata" Untukmu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background: linear-gradient(135deg, #f79e5b, #f174ff);
+      font-family: "Comic Neue", sans-serif;
+      color: #ffffff;
+      
+     
+    }
+
+    .opsi {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 3px;
+      flex-direction: row;
+      padding: 5px;
+    }
+
+    .video-container {
+      width: 300px; /* Mengatur lebar kontainer menjadi 100% */
+      height: auto; /* Mengatur tinggi kontainer menjadi 100% */
+      max-width: 900vh; /* Maksimal lebar kontainer untuk video Reels */
+      position: relative;
+      box-shadow: 0 4px 8px rgba(246, 212, 43, 0.859);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .text-container {
+      text-align: center;
+      margin-bottom: 20px; /* Jarak antara judul dan video */
+    }
+
+    video {
+      width: 100%;
+      height: auto; /* Menjaga rasio aspek */
+      border: none;
+      border-radius: 10px;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .controls button {
+      margin: 0 5px;
+      padding: 10px;
+      background: #66a6ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .controls button:hover {
+      background: #ff9234;
+    }
+
+    .lanjut, .kembali {
+      margin-top: 70px; /* Jarak antara video dan tombol */
+      text-align: center; /* Mengatur teks tombol agar berada di tengah */
+      border-radius: 3px;
+      padding: 5px 20px;
+    }
+
+    .lanjut a, .kembali a {
+      color: #ffffff; /* Warna teks tombol */
+      text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+      padding: 10px 20px; /* Menambahkan padding pada tombol */
+      background-color: #ffaff0; /* Warna latar belakang tombol */
+      border-radius: 5px; /* Membuat sudut tombol melengkung */
+    }
+
+    .lanjut a:hover, .kembali a:hover {
+      background-color: #ffb575;
+    } /* Mengubah warna latar belakang saat hover */
+    
+
+  </style>
+</head>
+<body>
+  <div class="text-container">
+    <h1>Sepatah Kata dari Bapak Prabowo Subianto</h2>
+    <h3>untuk Mutiara Elisya Rangkuti</h3>
+  </div>
+
+  <div class="video-container">
+    <video id="video" controls>
+      <source src="bahanvid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="controls" id="custom-controls" style="display: none;">
+      <button id="play">Play</button>
+      <button id="pause">Pause</button>
+      <button id="mute">Mute</button>
+    </div>
+  </div>
+  
+  <div class="opsi">
+    <div class="kembali">
+      <a href="hal1.html">Balik tadi ntar</a>
+    </div>
+    <div class="lanjut">
+      <a href="hal3.html">Gasslah lanjuut</a>
+    </div>
+
+    <audio id="background-audio" autoplay loop>
+      <source src="lagubcg.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    const video = document.getElementById('video');
+    const playButton = document.getElementById('play');
+    const pauseButton = document.getElementById('pause');
+    const muteButton = document.getElementById('mute');
+    const customControls = document.getElementById('custom-controls');
+
+    // Show custom controls if video controls are disabled
+    if (!video.hasAttribute('controls')) {
+      customControls.style.display = 'flex';
+    }
+
+    playButton.addEventListener('click', () => {
+      video.play();
+    });
+
+    pauseButton.addEventListener('click', () => {
+      video.pause();
+    });
+
+    muteButton.addEventListener('click', () => {
+      video.muted = !video.muted;
+      muteButton.textContent = video.muted ? 'Unmute' : 'Mute';
+    });
+
+    // Mengatur volume audio
+    const audioElement = document.getElementById('background-audio');
+    audioElement.volume = 0.20; // Mengatur volume (0.0 hingga 1.0)
+  </script>
+</body>
+</html>
