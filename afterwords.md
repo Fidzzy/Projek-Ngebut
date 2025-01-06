@@ -1,7 +1,7 @@
 Halo haloo...
 Jadii..
 Itulah tadi semua ucapan buatmu
-Gimana menurutmu hehe :V (*serius nanya)
+Gimana menurutmu hehe :V (*serius nanya, plis jawab)
 Soalnya sampe sekarang ini codingan terpanjang yang pernah kubuat (700++ baris cuyyy) makanya aku minta pendapatmu
 Awalnya aku kan mau buat ini dari awal liburan, tapi itulah..
 Tetap dikeroyok tugas pang mana aku mageran lagi ngerjainnya T_T, ditambah diajak jalan aja aku (biarpun kadang aku jalan sendiri sih)
@@ -21,5 +21,6 @@ Apa kau lagi sakit?
 Gimana mk semester 2 ini? Apa apa aja?
 Jangan segan" nanya samaku klo mau nnya kau hehe, jujur aja dri dulu seruan baso samamu
 Mungkin itu ajalah dariku, jika berkenan jawab pertanyaanku itu di wa hehe :v
-Sekali lagi Selamat Ulang Tahun Muti!! Senang mengenalmu
+Sekali lagi Selamat Ulang Tahun Muti!!
+
 
