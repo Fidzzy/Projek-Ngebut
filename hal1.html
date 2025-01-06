@@ -104,6 +104,13 @@
       "Dah dulu yang ini yaaa, lanjuuuttt..." // lanjut
     ];
 
+    window.onload = function() {
+      var audio = document.getElementById("background-audio");
+      audio.play().catch(function(error) {
+        console.log("Gagal memutar", error);
+      });
+    };
+
     const gifs = [
       "senyumhitam.gif",
       "hbd.gif",
