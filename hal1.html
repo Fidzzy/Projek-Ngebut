@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habede Mutii</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', sans-serif;
+      display: flex;
+      flex-direction: column; /* Mengatur arah flex menjadi kolom */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px; /* Menambahkan padding untuk ruang di atas dan bawah */
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .message-container {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px; /* Jarak antara pesan dan GIF */
+    }
+
+    .fade {
+      animation: fade 5s infinite;
+    }
+
+    @keyframes fade {
+      0%, 100% {
+        opacity: 0;
+      }
+      10%, 90% {
+        opacity: 1;
+      }
+    }
+
+    .gif-container {
+      width: 100%; /* Mengatur lebar kontainer GIF menjadi 100% */
+      max-width: 400px; /* Maksimal lebar kontainer GIF */
+      margin-bottom: 20px; /* Jarak antara GIF dan tombol */
+      display: flex; /* Menggunakan flexbox untuk memusatkan gambar */
+      justify-content: center; /* Memusatkan gambar secara horizontal */
+    }
+
+    img {
+      max-width: 100%; /* Agar GIF responsif */
+      height: auto; /* Menjaga rasio aspek */
+    }
+
+    .tombol {
+      text-align: center; /* Mengatur teks tombol agar berada di tengah */
+    }
+
+    .tombol a {
+      padding: 10px 20px; /* Menambahkan padding pada tombol */
+      background-color: #ffffff; /* Warna latar belakang tombol */
+      color: #ff9a9e; /* Warna teks tombol */
+      text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+      border-radius: 5px; /* Membuat sudut tombol melengkung */
+      font-weight: bold; /* Menebalkan teks tombol */
+    }
+
+    .tombol a:hover {
+      background-color: #ff9a9e; /* Mengubah warna latar belakang saat hover */
+      color: #ffffff; /* Mengubah warna teks saat hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container" id="message"></div>
+
+  <div class="gif-container">
+    <img id="gif" src="https://i.pinimg.com/originals/b0/9a/06/b09a0682c2cd4d291bf195d52870affd.gif" alt="Animated GIF">
+  </div>
+
+  <div class="tombol">
+    <a href="hal2.html">Lanjuuuttt....</a>
+  </div>
+
+  <audio id="background-audio" autoplay loop>
+    <source src="bshal1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const messages = [
+      "Haloooo...!!!", //gif senyum
+      "Met ultah yang ke 19 Mutiii!!!!", // gif hbd
+      "Umur bertambah, waktu di dunia berkurang ehe :v", // gif hm2
+      "Perbanyak amal ibadahnya yyy :D", // gif hijab
+      "Jadila kek 'Mutiara', kek yang dulu pernah kubilang", // gif bunga
+      "*itupun klo masi ingatmu :I", // pasrah
+      "Jadi....", // rebah
+      "Gimana menurutmu kali ini", // nanya
+      "Lebih keren kannnn WKWKWKWKWK", // anjayhitam
+      "Dah dulu yang ini yaaa, lanjuuuttt..." // lanjut
+    ];
+
+    window.onload = function() {
+      var audio = document.getElementById("background-audio");
+      audio.play().catch(function(error) {
+        console.log("Gagal memutar", error);
+      });
+      
+    };
+
+    const gifs = [
+      "senyumhitam.gif",
+      "hbd.gif",
+      "hm2.gif",
+      "hijab.gif",
+      "https://i.pinimg.com/originals/b0/9a/06/b09a0682c2cd4d291bf195d52870affd.gif",
+      "pasrah.gif",
+      "rebahhitam.gif",
+      "nanya.gif",
+      "anjayhitam.gif",
+      "lanjut.gif"
+    ];
+
+    let currentMessageIndex = 0;
+    let currentGifIndex = 0;
+    const messageElement = document.getElementById('message');
+    const gifElement = document.getElementById('gif');
+
+    function showNextMessage() {
+            // Update the message
+      messageElement.textContent = messages[currentMessageIndex];
+      // Add fade effect class
+      messageElement.classList.add('fade');
+
+      // Move to the next message
+      currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+
+      // Remove fade effect class after animation ends
+      setTimeout(() => {
+        messageElement.classList.remove('fade');
+      }, 3000); // Match the duration of the CSS animation
+    }
+
+    function showNextGif() {
+      // Update the GIF
+      gifElement.src = gifs[currentGifIndex];
+
+      // Move to the next GIF
+      currentGifIndex = (currentGifIndex + 1) % gifs.length;
+    }
+
+    // Start displaying messages and GIFs
+    showNextMessage();
+    showNextGif();
+    setInterval(showNextMessage, 5000); // Show a new message every 5 seconds
+    setInterval(showNextGif, 5000); // Show a new GIF every 5 seconds
+ 
+     // Mengatur volume audio
+     const audioElement = document.getElementById('background-audio');
+    audioElement.volume = 1.0; // Mengatur volume (0.0 hingga 1.0)
+  </script>
+</body>
+</html>
